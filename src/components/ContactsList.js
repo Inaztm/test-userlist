@@ -2,23 +2,34 @@ import React, { Component } from 'react';
 
 import './ContactsList.css';
 
-import { Image, List, Header } from 'semantic-ui-react';
+import { Image, List } from 'semantic-ui-react';
+
+import formatName from '../helpers/formatName.js';
 
 class ContactsList extends Component {
 
 	render() {
-		const { contacts } = this.props;
+		const { contacts, selectedContact, selectContact } = this.props;
+
+		const imageStyles = { marginLeft: '5px' }
+		const containerStyles = { margin: '5px 0' }
 
 		return (
-			<div className="scroll">
-				<List>
-				    {contacts.map((contact) =>
+			<div className="scroll" style={containerStyles}>
+				<List divided>
+				    {contacts.map(contact =>
 				    	<List.Item
-				    		key={contact.general.firstName + '_' + contact.general.lastName}>
-						    <Image avatar src='/images/avatar/small/helen.jpg' />
+				    		onClick={(e) => selectContact(contact)}
+				    		key={formatName(contact.general.firstName, contact.general.lastName, '_')}>
+						    <Image
+						    	width="45px"
+						    	height="45px"
+						    	style={imageStyles}
+						    	rounded
+						    	src={contact.general.avatar} />
 						    <List.Content>
-						        <List.Header>{contact.general.firstName}</List.Header>
-						        An excellent companion
+						        <List.Header>{formatName(contact.general.firstName, contact.general.lastName, ' ')}</List.Header>
+						        <span>{contact.job.title}</span>
 						    </List.Content>
 					    </List.Item>
 					)}

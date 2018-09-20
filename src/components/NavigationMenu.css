@@ -2,7 +2,8 @@
 .navigation-menu {
 	display: flex;
 	flex-direction: column;
-	width: 308px;
+	min-width: 407px;
+	width: 407px;
 	background-color: #f5f5f5;
 	overflow: hidden;
 }
