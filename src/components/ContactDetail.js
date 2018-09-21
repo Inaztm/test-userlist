@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import React, { Component } from 'react';
 
-import { Image, Grid, Container, Button, Header, List, Divider, Segment, Label } from 'semantic-ui-react';
+import { Image, Grid, Button, Header, List, Divider, Segment, Label } from 'semantic-ui-react';
 
 import NotSelected from '../components/NotSelected';
 

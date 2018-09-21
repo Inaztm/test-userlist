@@ -15,7 +15,8 @@ class SearchContacts extends Component {
             <Search
                 onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
                 open={false}
-                value={keyword} />
+                value={keyword}
+                placeholder="search text..." />
         );
     }
 
