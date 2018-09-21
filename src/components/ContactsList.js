@@ -20,7 +20,8 @@ class ContactsList extends Component {
 				    {contacts.map(contact =>
 				    	<List.Item
 				    		onClick={(e) => selectContact(contact)}
-				    		key={formatName(contact.general.firstName, contact.general.lastName, '_')}>
+				    		key={formatName(contact.general.firstName, contact.general.lastName, '_')}
+				    		active={selectedContact === contact}>
 						    <Image
 						    	width="45px"
 						    	height="45px"

@@ -2,7 +2,7 @@ import { SELECT_CONTACT, FETCH_CONTACTS } from "../actionTypes";
 
 const initialState = {
   all: [],
-  selected: null
+  selected: {}
 };
 
 export default function(state = initialState, action) {

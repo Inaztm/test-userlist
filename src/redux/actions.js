@@ -7,7 +7,7 @@ function handleErrors(response) {
   return response;
 }
 
-function fetchContactsSuccess(contacts) {
+export function fetchContactsSuccess(contacts) {
   return {
     type: FETCH_CONTACTS,
     payload: {
@@ -33,5 +33,14 @@ export function selectContact(contact) {
   	payload: {
   		contact
   	}
+  }
+}
+
+export function deselectContact() {
+  return {
+    type: SELECT_CONTACT,
+    payload: {
+      contact: {}
+    }
   }
 }
