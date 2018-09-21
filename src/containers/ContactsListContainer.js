@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
 import ContactsList from '../components/ContactsList'
 import { selectContact } from '../redux/actions'
+import { getContactsBySearch } from '../selectors'
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.all,
+  contacts: getContactsBySearch(state),
   selectedContact: state.contacts.selected
 });
 

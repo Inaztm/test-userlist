@@ -9,23 +9,23 @@ import ContactDetailContainer from './containers/ContactDetailContainer';
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.fetchContacts();
-  }
+    componentDidMount() {
+        this.props.fetchContacts();
+    }
 
-  render() {
-    return (
-      <NavigationWrapper>
-        <NavigationMenu>
-          <SearchContainer />
-          <ContactsListContainer />
-        </NavigationMenu>
-        <main className="full-width">
-          <ContactDetailContainer />
-        </main>
-      </NavigationWrapper>
-    );
-  }
+    render() {
+        return (
+            <NavigationWrapper>
+                <NavigationMenu>
+                    <SearchContainer />
+                    <ContactsListContainer />
+                </NavigationMenu>
+                <main className="full-width">
+                    <ContactDetailContainer />
+                </main>
+            </NavigationWrapper>
+        );
+    }
 
 }
 

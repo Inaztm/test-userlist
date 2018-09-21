@@ -2,11 +2,16 @@ import _ from 'lodash';
 
 import React, { Component } from 'react';
 
-import { Image, Grid, Button, Header, List, Divider, Segment, Label } from 'semantic-ui-react';
+import { Image, Grid, Container, Button, Header, List, Divider, Segment, Label } from 'semantic-ui-react';
 
 import NotSelected from '../components/NotSelected';
 
 import formatName from '../helpers/formatName.js';
+
+const imageContainerStyles = {
+	display: 'flex',
+	justifyContent: 'center'
+}
 
 class ContactDetail extends Component {
 
@@ -28,14 +33,17 @@ class ContactDetail extends Component {
 							icon='left chevron'
 							content='Back' />
 					</Grid.Column>
-				    <Grid.Column width={4}>
-				    	<Image
-				    		src={general.avatar}
-				    		size="large"
-				    		rounded />
+				    <Grid.Column width={3}>
+				    	<div style={imageContainerStyles}>
+					    	<Image
+					    		src={general.avatar}
+					    		width="128"
+					    		height="128"
+					    		rounded />
+					    </div>
 				    </Grid.Column>
 
-				    <Grid.Column width={12}>
+				    <Grid.Column width={13}>
 				    	<Header as="h1">
 				    		{formatName(general.firstName, general.lastName, ' ')}
 				    	</Header>

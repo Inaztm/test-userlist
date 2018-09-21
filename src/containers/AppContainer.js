@@ -1,17 +1,11 @@
 import { connect } from 'react-redux'
 import App from '../App'
-import { fetchContacts, selectContact } from '../redux/actions'
-
-const mapStateToProps = state => ({
-  contacts: state.contacts.all,
-  selectedContact: state.contacts.selected
-});
+import { fetchContacts } from '../redux/actions'
 
 const mapDispatchToProps = dispatch => ({
-  fetchContacts: () => dispatch( fetchContacts() ),
-  selectContact: (contact) => dispatch( selectContact(contact) )
+  fetchContacts: () => dispatch( fetchContacts() )
 });
 
-const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App)
+const AppContainer = connect(null, mapDispatchToProps)(App)
 
 export default AppContainer

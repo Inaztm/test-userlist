@@ -1,0 +1,8 @@
+
+.contact-list-item {
+	user-select: none;
+}
+
+.contact-list-item.--active {
+	background-color: #f5f5f5;
+}

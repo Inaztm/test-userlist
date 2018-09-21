@@ -2,3 +2,7 @@
 export const SELECT_CONTACT = 'SELECT_CONTACT';
 
 export const FETCH_CONTACTS = 'FETCH_CONTACTS';
+
+export const SET_KEYWORD = 'SET_KEYWORD';
+
+

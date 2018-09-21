@@ -1,14 +1,13 @@
 import { connect } from 'react-redux'
 import SearchContacts from '../components/SearchContacts'
-import { selectContact } from '../redux/actions'
+import { setKeyword } from '../redux/actions'
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.all,
-  selectedContact: state.contacts.selected
+  keyword: state.contacts.keyword
 });
 
 const mapDispatchToProps = dispatch => ({
-  selectContact: (contact) => dispatch( selectContact(contact) )
+  setKeyword: value => dispatch( setKeyword(value) )
 });
 
 const SearchContainer = connect(mapStateToProps, mapDispatchToProps)(SearchContacts)
