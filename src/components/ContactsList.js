@@ -16,7 +16,7 @@ class ContactsList extends Component {
 	isActive = contact => _.isEqual(this.props.selectedContact, contact)
 
 	render() {
-		const { contacts, selectedContact, selectContact } = this.props;
+		const { contacts, selectContact } = this.props;
 
 		return (
 			<div className="scroll" style={containerStyles}>
